@@ -1,15 +1,15 @@
 
 @font-face {
   font-family: 'Messina';
-  src: url('../../fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff'),
-  url('../../fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff2')
+  src: url('../../docs/assets/fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff'),
+  url('../../docs/assets/fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff2')
 }
 
 @font-face {
   font-family: 'Messina';
   font-style: italic;
-  src: url('../../fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff'),
-  url('../../fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff2')
+  src: url('../../docs/assets/fonts/MessinaSans_Complete_Italic_Variable_Web_Trial.woff'),
+  url('../../docs/assets/fonts/MessinaSans_Complete_Italic_Variable_Web_Trial.woff2')
 }
 
 @mixin default-font {
