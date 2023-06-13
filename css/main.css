@@ -156,7 +156,7 @@ main dl {
   border: 1px rgba(153, 153, 153, 0.2) solid;
   border-radius: 0.75rem;
   display: flex;
-  padding: var(--gap);
+  padding: 2rem var(--gap);
   gap: var(--gap);
   font-size: 0.75rem;
 }

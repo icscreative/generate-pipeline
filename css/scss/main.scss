@@ -75,7 +75,7 @@ main {
     border: 1px $ice solid;
     border-radius: $xs;
     display: flex;
-    padding: var(--gap);
+    padding: $xl var(--gap);
     gap: var(--gap);
     font-size: $xs;
     div {
