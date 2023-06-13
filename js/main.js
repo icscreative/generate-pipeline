@@ -1,38 +1,7 @@
 $(function () {
-    function setMenu(element) {
-        navItem = $(element).parent('li')
-        navMenu = navItem.children('section')
-
-        baseREM = $('body').css('font-size');
-        borderPad = parseFloat(baseREM) / 4;
-
-        offsetRight = Math.ceil($(window).width() - (navMenu.offset().left + navMenu.outerWidth()) - borderPad);
-        navMaxHeight = Math.abs(((navMenu.offset().top - $(document).scrollTop() ) - $(window).height()))
-
-        navMenu.css('max-height', navMaxHeight)
-        
-        if (offsetRight < 0) {
-            navMenu.css('left', offsetRight + 'px')
-        }
-    }
-    $(window).bind('load resize', function () {
-        $('nav section').css('left', 'auto')
-        $('nav #primary button.open').each(function () {
-            setMenu(this)
-        })
-    })
-    $('nav aside button').focus(function() {
-        $(this).siblings('input').focus()
-    })
-    $('nav .hamburger button').focus(function() {
-        $('nav#light-mode .list-wrapper').focus()
-    })
-    $('nav section button.close').click(function() {
-        $('nav#light-mode .list-wrapper').focus()
-    })
     
-    const rings = document.querySelectorAll('.radial');
-    const texts = document.querySelectorAll('.txt-block');
+    const bars = document.querySelectorAll('.bar');
+    const texts = document.querySelectorAll('.txt');
 
     const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -42,10 +11,10 @@ $(function () {
         }
     });
     }, {
-    threshold: 0.8
+    threshold: 0.5
     });
 
-    rings.forEach(ring => {
-    observer.observe(ring);
+    bars.forEach(bar => {
+    observer.observe(bar);
     });
 });

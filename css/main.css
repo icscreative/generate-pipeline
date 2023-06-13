@@ -175,7 +175,7 @@ main dl div dt {
 main dl div dd {
   width: 0.75rem;
   height: 0.75rem;
-  margin-block-end: auto;
+  margin-block: auto;
   border-radius: 50%;
   background-color: #000000;
   flex-shrink: 0;
@@ -301,32 +301,34 @@ main table tr td:nth-child(n+3) {
   font-size: 0;
   padding-inline: 0;
 }
-main table tr td div {
+main table tr td .bar {
   position: absolute;
   width: 0;
   inset: auto -1px;
   background-color: #732D87;
   height: 2rem;
   box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.1882352941);
-  animation: grow 0.16s forwards linear;
 }
-main table tr td:nth-child(3) div {
-  animation-delay: calc(0.16s);
+main table tr td .bar.animate {
+  animation: grow 0.14s forwards linear;
+}
+main table tr td:nth-child(3) .bar {
+  animation-delay: calc(0.14s);
   inset: auto 0;
 }
-main table tr td:nth-child(4) div {
-  animation-delay: calc(0.16s * 2);
+main table tr td:nth-child(4) .bar {
+  animation-delay: calc(0.14s * 2);
 }
-main table tr td:nth-child(5) div {
-  animation-delay: calc(0.16s * 3);
+main table tr td:nth-child(5) .bar {
+  animation-delay: calc(0.14s * 3);
 }
-main table tr td:nth-child(6) div {
-  animation-delay: calc(0.16s * 4);
+main table tr td:nth-child(6) .bar {
+  animation-delay: calc(0.14s * 4);
 }
-main table tr td:nth-child(7) div {
-  animation-delay: calc(0.16s * 5);
+main table tr td:nth-child(7) .bar {
+  animation-delay: calc(0.14s * 5);
 }
-main table tr td div.cap {
+main table tr td .cap {
   max-width: 75%;
   border-radius: 0 1.5rem 1.5rem 0;
 }

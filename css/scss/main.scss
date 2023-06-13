@@ -11,7 +11,7 @@
   }
 }
 
-$grow-time: 0.16s;
+$grow-time: 0.14s;
 
 :root {
   --gap: #{$xl};
@@ -92,7 +92,7 @@ main {
       dd {
         width: $xs;
         height: $xs;
-        margin-block-end: auto;
+        margin-block: auto;
         border-radius: 50%;
         background-color: $black;
         flex-shrink: 0;
@@ -259,32 +259,34 @@ main {
         font-size: 0;
         padding-inline: 0;
       }
-      td div {
+      td .bar {
         position: absolute;
         width: 0;
         inset: auto -1px;
         background-color: $purple;
         height: $xl;
         box-shadow: 0 $tiny 0 #00000030;
+      }
+      td .bar.animate {
         animation: grow $grow-time forwards linear;
       }
-      td:nth-child(3) div {
+      td:nth-child(3) .bar {
         animation-delay: calc(#{$grow-time});
         inset: auto 0;
       }
-      td:nth-child(4) div {
+      td:nth-child(4) .bar {
         animation-delay: calc(#{$grow-time} * 2);
       }
-      td:nth-child(5) div {
+      td:nth-child(5) .bar {
         animation-delay: calc(#{$grow-time} * 3);
       }
-      td:nth-child(6) div {
+      td:nth-child(6) .bar {
         animation-delay: calc(#{$grow-time} * 4);
       }
-      td:nth-child(7) div {
+      td:nth-child(7) .bar {
         animation-delay: calc(#{$grow-time} * 5);
       }
-      td div.cap {
+      td .cap {
         max-width: 75%;
         border-radius: 0 $lg $lg 0;
       }
