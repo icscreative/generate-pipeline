@@ -1,0 +1,455 @@
+@import 'scale';
+@import 'fonts.scss';
+@import 'colors.scss';
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% + 2px);
+  }
+}
+
+$grow-time: 0.15s;
+
+:root {
+  --gap: #{$xl};
+
+  --quarter-gap: calc(var(--gap) / 4);
+  --half-gap: calc(var(--gap) / 2);
+
+  --double-gap: calc(var(--gap) * 2);
+  --quad-gap: calc(var(--gap) * 4);
+}
+
+dl,
+dt,
+dd,
+ul,
+li,
+menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+button {
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+body,
+input,
+button {
+  @include default-font;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  background-color: $white;
+}
+
+nav {
+}
+
+main {
+  margin: var(--gap);
+  dl {
+    border: 1px $ice solid;
+    border-radius: $xs;
+    display: flex;
+    padding: var(--gap);
+    gap: var(--gap);
+    font-size: $xs;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--quarter-gap);
+      flex-wrap: wrap;
+      dt {
+        text-align: center;
+        word-break: keep-all;
+        margin-block-end: auto;
+      }
+      dd {
+        width: $xs;
+        height: $xs;
+        margin-block-end: auto;
+        border-radius: 50%;
+        background-color: $black;
+        flex-shrink: 0;
+        order: -1;
+      }
+    }
+    div.immunology {
+      dd {
+        background-color: $purple;
+      }
+    }
+    div.infectious {
+      dd {
+        background-color: $green;
+      }
+    }
+    div.oncology {
+      dd {
+        background-color: $orange;
+      }
+    }
+    div.cardio {
+      dd {
+        background-color: $grey;
+      }
+    }
+    div.undisclosed {
+      dd {
+        background-color: $blue;
+      }
+    }
+  }
+
+  table {
+    position: relative;
+    margin-block-start: var(--double-gap);
+    font-size: $xs;
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    grid-template-columns:
+    fit-content($maxxx)
+    fit-content($maxxx)
+    minmax($massive, 2fr)
+    minmax($massive, 2fr)
+    minmax($massive, 2fr)
+    minmax($massive, 2fr)
+    minmax($massive, 2fr)
+    fit-content($maxxx);
+    thead,
+    tbody,
+    tr {
+      display: contents;
+    }
+    thead th::after {
+      content: "";
+      position: absolute;
+      inset: -6em 0 0;
+      background-color: $white;
+      border-left: 1px solid $ice;
+      box-shadow: 0 $lil 0 #00000014;
+      z-index: -1;
+    }
+    thead th:last-child::after, thead th:nth-child(1)::after, thead th:nth-child(2)::after, thead th:nth-child(3)::after {
+      border: 0;
+    }
+    thead tr {
+      position: sticky;
+      top: 6em;
+    }
+    td + td, th + th {
+      border-inline-start: 1px $ice solid;
+    }
+    th, td {
+      min-width: $lg;
+      padding: var(--half-gap) var(--quarter-gap);
+      border-block-end: 1px $ice solid;
+    }
+    th {
+      position: sticky;
+      top: 6em;
+      text-align: left;
+      font-weight: bolder;
+      padding: var(--quarter-gap);
+      padding-block-start: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border-color: $black;
+      z-index: 1;
+    }
+    .abs {
+      overflow: visible;
+      border-right: 0;
+      border-left: 0;
+      span {
+        position: absolute;
+        transform-origin: bottom left;
+        transform: rotate(-55deg);
+        bottom: var(--quarter-gap);
+        left: var(--half-gap);
+        z-index: 1;
+      }
+    }
+    tr.immunology {
+      td {
+        div {
+          background-color: $purple;
+        }
+      }
+    }
+    tr.infectious {
+      td {
+        div {
+          background-color: $green;
+        }
+      }
+    }
+    tr.oncology {
+      td {
+        div {
+          background-color: $orange;
+        }
+      }
+    }
+    tr.cardio {
+      td {
+        div {
+          background-color: $grey;
+        }
+      }
+    }
+    tr.undisclosed {
+      td {
+        div {
+          background-color: $blue;
+        }
+      }
+    }
+    tr {
+      td {
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: visible;
+        .img {
+          height: $xxl;
+          aspect-ratio: 1.5;
+          border: 1px solid $black;
+          border-radius: $xxs;
+          margin: auto;
+        }
+      }
+      td:first-child {
+        font-weight: bolder;
+      }
+      td:nth-child(2), th:nth-child(2) {
+        border-inline-end: 1px $black solid;
+        padding-inline-end: $xl;
+      }
+      td:nth-child(3), th:nth-child(3) {
+        border-inline-start: none;
+      }
+      td:nth-child(n+3) {
+        font-size: 0;
+        padding-inline: 0;
+      }
+      td div {
+        position: absolute;
+        width: 0;
+        inset: auto -1px;
+        background-color: $purple;
+        height: $xl;
+        box-shadow: 0 $tiny 0 #00000030;
+        animation: grow $grow-time forwards linear;
+      }
+      td:nth-child(3) div {
+        animation-delay: calc(#{$grow-time});
+        inset: auto 0;
+      }
+      td:nth-child(4) div {
+        animation-delay: calc(#{$grow-time} * 2);
+      }
+      td:nth-child(5) div {
+        animation-delay: calc(#{$grow-time} * 3);
+      }
+      td:nth-child(6) div {
+        animation-delay: calc(#{$grow-time} * 4);
+      }
+      td:nth-child(7) div {
+        animation-delay: calc(#{$grow-time} * 5);
+      }
+      td div.cap {
+        max-width: 75%;
+        border-radius: 0 $lg $lg 0;
+      }
+    }
+  }
+}
+
+footer {
+}
+
+@media (min-width: 1280px) {
+  main {
+    table {
+      thead {
+        th {
+          top: $reg;
+        }
+        th::after {
+          inset-block-start: -1.1rem;
+        }
+      }
+      .abs {
+        span {
+          position: relative;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+//BIG Screens - Scaling for balanced white space and font-size
+@media (min-width: 6144px) {  
+  :root {
+    --gap: #{$maxx};
+    font-size: #{$huge};
+  }
+}
+
+@media (max-width: 6144px) {
+  :root {
+    --gap: #{$max};
+    font-size: $xxxl;
+  }
+}
+
+@media (max-width: 3840px) {
+  :root {
+    --gap: #{$giant};
+    font-size: $xl;
+  }
+}
+
+@media (max-width: 2560px) {
+  :root {
+    --gap: #{$massive};
+    font-size: $lg;
+  }
+}
+
+@media (max-width: 1920px) {
+  :root {
+    --gap: #{$huge};
+    font-size: $bg;
+  }
+}
+
+@media (max-width: 1680px) {
+  :root {
+    --gap: #{$xxxl};
+    font-size: $md;
+  }
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --gap: #{$xxl};
+  }
+}
+
+
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 820px) {
+  main {
+    table {
+      grid-template-columns: 
+      repeat(5, 1fr);
+      thead {
+        display: block;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+      tr {
+        td {
+          min-height: $lg;
+          padding-inline: 0;
+          padding-block: $xs;
+          .img {
+            margin: 0;
+          }
+          div {
+            box-shadow: none;
+          }
+        }
+        td, td:nth-child(2) {
+          border: 0;
+        }
+        td:nth-child(3) {
+          border-left: 1px solid $black;
+          .cap {
+            max-width: 100%;
+          }
+        }
+        td:first-child,
+        td:last-child,
+        td:nth-child(2) {
+          grid-column-start: 1;
+          grid-column-end: 6;
+          min-height: unset;
+        }
+        td:first-child {
+          margin-block-start: $xl;
+          padding-block-end: 0;
+          font-size: $md;
+        }
+      } 
+    }
+  }
+}
+
+
+@media (max-width: 700px) {
+  :root {
+    --gap: #{$reg};
+  }
+  .t1 {
+    font-size: $massive;
+  }
+  .t2 {
+    font-size: $huge;
+  }
+}
+
+@media (max-width: 501px) {
+  :root {
+    --gap: #{$xxs};
+  }
+  main {
+    dl {
+      flex-direction: column;
+      align-items: flex-start;
+      div {
+        gap: var(--gap);
+      }
+    }
+  }
+}
+
+@media (max-width: 401px) {
+  :root {
+    --gap: #{$lil};
+  }
+}
