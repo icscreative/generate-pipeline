@@ -4,7 +4,6 @@
   src: url('../docs/assets/fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff'),
   url('../docs/assets/fonts/MessinaSans_Complete_Upright_Variable_Web_Trial.woff2')
 }
-
 @font-face {
   font-family: 'Messina';
   font-style: italic;
@@ -27,55 +26,34 @@
   letter-spacing: -0.04em;
   line-height: 1;
 }
-
 .t2 {
   font-size: $massive;
   font-weight: 200;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
-
 .t3 {
   font-size: $huge;
   font-weight: 200;
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
-
 .t4 {
   font-size: $xxxl;
   font-weight: 200;
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
-
 .t5 {
   font-size: $xxl;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1.275;
 }
-
 .t6 {
   font-size: $xl;
   font-weight: 400;
   line-height: 1.3;
-}
-
-.p1 {
-  font-size: $md;
-  font-weight: 300;
-  line-height: 1.4;
-}
-
-.p2 {
-  font-size: $reg;
-  line-height: 1.5;
-}
-
-.p3 {
-  font-size: $sm;
-  line-height: 1.5;
 }
 
 .s1 {
@@ -84,17 +62,29 @@
   font-size: $reg;
   font-weight: 500;
 }
-
 .s2 {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: $sm;
   font-weight: 500;
 }
-
 .s3 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: $xs;
   font-weight: 500;
+}
+
+.p1 {
+  font-size: $md;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.p2 {
+  font-size: $reg;
+  line-height: 1.5;
+}
+.p3 {
+  font-size: $sm;
+  line-height: 1.5;
 }

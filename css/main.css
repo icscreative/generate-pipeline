@@ -48,22 +48,6 @@
   line-height: 1.3;
 }
 
-.p1 {
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1.4;
-}
-
-.p2 {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.p3 {
-  font-size: 0.875rem;
-  line-height: 1.5;
-}
-
 .s1 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -85,12 +69,36 @@
   font-weight: 500;
 }
 
+.p1 {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.p2 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.p3 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 @keyframes grow {
   0% {
     width: 0;
   }
   100% {
     width: calc(100% + 2px);
+  }
+}
+@keyframes blink-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 :root {
@@ -146,7 +154,7 @@ button {
 
 body {
   position: relative;
-  background-color: #f8f7f3;
+  background-color: #f7f9f5;
 }
 
 main {
@@ -191,7 +199,7 @@ main dl div.oncology dd {
   background-color: #E16E1E;
 }
 main dl div.cardio dd {
-  background-color: #999999;
+  background-color: #666666;
 }
 main dl div.undisclosed dd {
   background-color: #0F4196;
@@ -214,7 +222,7 @@ main table thead th::after {
   content: "";
   position: absolute;
   inset: -6em 0 0;
-  background-color: #f8f7f3;
+  background-color: #f7f9f5;
   border-left: 1px solid rgba(153, 153, 153, 0.2);
   box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.0784313725);
   z-index: -1;
@@ -261,18 +269,23 @@ main table .abs span {
 }
 main table tr.immunology td div {
   background-color: #732D87;
+  color: #732D87;
 }
 main table tr.infectious td div {
   background-color: #237846;
+  color: #237846;
 }
 main table tr.oncology td div {
   background-color: #E16E1E;
+  color: #E16E1E;
 }
 main table tr.cardio td div {
-  background-color: #999999;
+  background-color: #666666;
+  color: #666666;
 }
 main table tr.undisclosed td div {
   background-color: #0F4196;
+  color: #0F4196;
 }
 main table tr td {
   display: flex;
@@ -329,10 +342,16 @@ main table tr td:nth-child(7) .bar {
   animation-delay: calc(0.14s * 5);
 }
 main table tr td .cap {
-  max-width: 75%;
+  max-width: 65%;
   border-radius: 0 1.5rem 1.5rem 0;
 }
 
+@media (min-width: 6144px) {
+  :root {
+    --gap: 16rem;
+    font-size: 3rem;
+  }
+}
 @media (min-width: 1280px) {
   main table thead th {
     top: 1rem;
@@ -344,12 +363,6 @@ main table tr td .cap {
     position: relative;
     bottom: 0;
     left: 0;
-  }
-}
-@media (min-width: 6144px) {
-  :root {
-    --gap: 16rem;
-    font-size: 3rem;
   }
 }
 @media (max-width: 6144px) {
@@ -388,7 +401,12 @@ main table tr td .cap {
   }
 }
 @media (max-width: 820px) {
+  :root {
+    --gap: 1.5rem;
+  }
   main table {
+    overflow: hidden;
+    row-gap: var(--gap);
     grid-template-columns: repeat(5, 1fr);
   }
   main table thead {
@@ -398,9 +416,21 @@ main table tr td .cap {
     overflow: hidden;
   }
   main table tr td {
-    min-height: 1.5rem;
-    padding-inline: 0;
-    padding-block: 0.75rem;
+    min-height: 2rem;
+    padding: 0;
+    margin-block: 0;
+  }
+  main table tr td .cap span {
+    position: absolute;
+    top: 0.14em;
+    right: -100vw;
+    left: 0;
+    font-weight: 900;
+    opacity: 0;
+  }
+  main table tr td .cap .txt.animate {
+    animation: blink-in 0.4s ease-in-out forwards;
+    animation-delay: calc(0.14s * 6);
   }
   main table tr td .img {
     margin: 0;
@@ -411,11 +441,8 @@ main table tr td .cap {
   main table tr td, main table tr td:nth-child(2) {
     border: 0;
   }
-  main table tr td:nth-child(3) {
-    border-left: 1px solid #000000;
-  }
-  main table tr td:nth-child(3) .cap {
-    max-width: 100%;
+  main table tr td:nth-child(n+3) {
+    font-size: 1.125rem;
   }
   main table tr td:first-child,
   main table tr td:last-child,
@@ -425,9 +452,30 @@ main table tr td .cap {
     min-height: unset;
   }
   main table tr td:first-child {
-    margin-block-start: 2rem;
+    margin-block-start: 2.5rem;
     padding-block-end: 0;
     font-size: 1.125rem;
+  }
+  main table tr td:last-child {
+    padding-block-start: var(--half-gap);
+  }
+  main table tr td:nth-child(3) {
+    border-left: 1px solid #000000;
+  }
+  main table tr td:nth-child(3) .cap {
+    max-width: 100%;
+  }
+  main table tr td:nth-child(3) .cap span {
+    left: 24vw;
+  }
+  main table tr td:nth-child(4) .cap span {
+    left: 18vw;
+  }
+  main table tr td:nth-child(5) .cap span,
+  main table tr td:nth-child(6) .cap span,
+  main table tr td:nth-child(7) .cap span {
+    color: #f7f9f5;
+    left: calc(2.5rem * -1);
   }
 }
 @media (max-width: 700px) {
@@ -456,6 +504,12 @@ main table tr td .cap {
 @media (max-width: 401px) {
   :root {
     --gap: 0.25rem;
+  }
+  main table tr td:nth-child(5) .cap span,
+  main table tr td:nth-child(6) .cap span,
+  main table tr td:nth-child(7) .cap span {
+    color: #f7f9f5;
+    left: calc(3rem * -1);
   }
 }
 
