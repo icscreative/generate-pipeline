@@ -105,6 +105,7 @@ main {
         border-radius: 50%;
         background-color: $black;
         flex-shrink: 0;
+        font-size: 0;
         order: -1;
       }
     }
@@ -177,6 +178,7 @@ main {
     }
     th, td {
       min-width: $lg;
+      min-height: $xxl;
       padding: var(--half-gap) var(--quarter-gap);
       border-block-end: 1px $ice solid;
     }
@@ -302,6 +304,8 @@ main {
       }
       td .cap {
         max-width: 65%;
+        display: flex;
+        align-items: center;
         border-radius: 0 $lg $lg 0;
       }
     }
@@ -409,8 +413,8 @@ footer {
           margin-block: 0;
           .cap {
             span {
+              font-size: $reg;
               position: absolute;
-              top: 0.14em;
               right: -100vw;
               left: 0;
               font-weight: 900;
@@ -431,9 +435,6 @@ footer {
         td, td:nth-child(2) {
           border: 0;
         }
-        td:nth-child(n+3) {
-          font-size: $md;
-        }
         td:first-child,
         td:last-child,
         td:nth-child(2) {
@@ -444,7 +445,7 @@ footer {
         td:first-child {
           margin-block-start: $xxxl;
           padding-block-end: 0;
-          font-size: $md;
+          font-size: $reg;
         }
         td:last-child {
           padding-block-start: var(--half-gap);
@@ -454,14 +455,14 @@ footer {
           .cap {
             max-width: 100%;
             span {
-              left: 24vw;
+              left: 22vw;
             }
           }
         }
         td:nth-child(4) {
           .cap {
             span {
-              left: 18vw;
+              left: 16vw;
             }
           }
         }
@@ -521,7 +522,7 @@ footer {
           .cap {
             span {
               color: $white;
-              left: calc(#{$huge} * -1);
+              left: calc(#{$massive} * -1);
             }
           }
         }

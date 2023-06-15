@@ -187,6 +187,7 @@ main dl div dd {
   border-radius: 50%;
   background-color: #000000;
   flex-shrink: 0;
+  font-size: 0;
   order: -1;
 }
 main dl div.immunology dd {
@@ -239,6 +240,7 @@ main table td + td, main table th + th {
 }
 main table th, main table td {
   min-width: 1.5rem;
+  min-height: 2.25rem;
   padding: var(--half-gap) var(--quarter-gap);
   border-block-end: 1px rgba(153, 153, 153, 0.2) solid;
 }
@@ -343,6 +345,8 @@ main table tr td:nth-child(7) .bar {
 }
 main table tr td .cap {
   max-width: 65%;
+  display: flex;
+  align-items: center;
   border-radius: 0 1.5rem 1.5rem 0;
 }
 
@@ -421,8 +425,8 @@ main table tr td .cap {
     margin-block: 0;
   }
   main table tr td .cap span {
+    font-size: 1rem;
     position: absolute;
-    top: 0.14em;
     right: -100vw;
     left: 0;
     font-weight: 900;
@@ -441,9 +445,6 @@ main table tr td .cap {
   main table tr td, main table tr td:nth-child(2) {
     border: 0;
   }
-  main table tr td:nth-child(n+3) {
-    font-size: 1.125rem;
-  }
   main table tr td:first-child,
   main table tr td:last-child,
   main table tr td:nth-child(2) {
@@ -454,7 +455,7 @@ main table tr td .cap {
   main table tr td:first-child {
     margin-block-start: 2.5rem;
     padding-block-end: 0;
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   main table tr td:last-child {
     padding-block-start: var(--half-gap);
@@ -466,10 +467,10 @@ main table tr td .cap {
     max-width: 100%;
   }
   main table tr td:nth-child(3) .cap span {
-    left: 24vw;
+    left: 22vw;
   }
   main table tr td:nth-child(4) .cap span {
-    left: 18vw;
+    left: 16vw;
   }
   main table tr td:nth-child(5) .cap span,
   main table tr td:nth-child(6) .cap span,
@@ -509,7 +510,7 @@ main table tr td .cap {
   main table tr td:nth-child(6) .cap span,
   main table tr td:nth-child(7) .cap span {
     color: #f7f9f5;
-    left: calc(3rem * -1);
+    left: calc(4rem * -1);
   }
 }
 
