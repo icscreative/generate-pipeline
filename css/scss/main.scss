@@ -327,10 +327,7 @@ footer {
     table {
       thead {
         th {
-          top: $reg;
-        }
-        th::after {
-          inset-block-start: -1.1rem;
+          top: $xl;
         }
       }
       .abs {

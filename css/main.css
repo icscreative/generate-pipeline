@@ -358,10 +358,7 @@ main table tr td .cap {
 }
 @media (min-width: 1280px) {
   main table thead th {
-    top: 1rem;
-  }
-  main table thead th::after {
-    inset-block-start: -1.1rem;
+    top: 2rem;
   }
   main table .abs span {
     position: relative;
