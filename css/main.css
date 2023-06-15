@@ -154,7 +154,7 @@ button {
 
 body {
   position: relative;
-  background-color: #f7f9f5;
+  background-color: #ffffff;
 }
 
 main {
@@ -164,7 +164,7 @@ main dl {
   border: 1px rgba(153, 153, 153, 0.2) solid;
   border-radius: 0.75rem;
   display: flex;
-  padding: 2rem var(--gap);
+  padding: var(--gap) var(--half-gap);
   gap: var(--gap);
   font-size: 0.75rem;
 }
@@ -223,7 +223,7 @@ main table thead th::after {
   content: "";
   position: absolute;
   inset: -6em 0 0;
-  background-color: #f7f9f5;
+  background-color: #ffffff;
   border-left: 1px solid rgba(153, 153, 153, 0.2);
   box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.0784313725);
   z-index: -1;
@@ -410,6 +410,7 @@ main table tr td .cap {
   }
   main table {
     overflow: hidden;
+    margin: 0;
     row-gap: var(--gap);
     grid-template-columns: repeat(5, 1fr);
   }
@@ -475,7 +476,7 @@ main table tr td .cap {
   main table tr td:nth-child(5) .cap span,
   main table tr td:nth-child(6) .cap span,
   main table tr td:nth-child(7) .cap span {
-    color: #f7f9f5;
+    color: #ffffff;
     left: calc(2.5rem * -1);
   }
 }
@@ -502,14 +503,14 @@ main table tr td .cap {
     gap: var(--gap);
   }
 }
-@media (max-width: 401px) {
+@media (max-width: 381px) {
   :root {
     --gap: 0.25rem;
   }
   main table tr td:nth-child(5) .cap span,
   main table tr td:nth-child(6) .cap span,
   main table tr td:nth-child(7) .cap span {
-    color: #f7f9f5;
+    color: #ffffff;
     left: calc(4rem * -1);
   }
 }

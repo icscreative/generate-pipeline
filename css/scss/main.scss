@@ -84,7 +84,7 @@ main {
     border: 1px $ice solid;
     border-radius: $xs;
     display: flex;
-    padding: $xl var(--gap);
+    padding: var(--gap) var(--half-gap);
     gap: var(--gap);
     font-size: $xs;
     div {
@@ -397,6 +397,7 @@ footer {
   main {
     table {
       overflow: hidden;
+      margin: 0;
       row-gap: var(--gap);
       grid-template-columns: 
       repeat(5, 1fr);
@@ -509,7 +510,7 @@ footer {
   }
 }
 
-@media (max-width: 401px) {
+@media (max-width: 381px) {
   :root {
     --gap: #{$lil};
   }
