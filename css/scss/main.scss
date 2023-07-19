@@ -356,6 +356,15 @@ main {
           border-radius: 0 $lg $lg 0;
         }
       }
+      // FF doesn't support the :not selector
+      td.cap {
+        .bar {
+          max-width: 65%;
+          display: flex;
+          align-items: center;
+          border-radius: 0 $lg $lg 0;
+        }
+      }
     }
   }
 }
@@ -501,18 +510,40 @@ footer {
         td:nth-child(3) {
           border-left: 1px solid $black;
         }
-        td:nth-child(2) + td:has(:not(.bar)), td:nth-child(3) + td:has(:not(.bar)) {
+        td:nth-child(2) + td:has(:not(.bar)), 
+        td:nth-child(3) + td:has(:not(.bar)) {
           .bar {
             max-width: 100%;
             span {
               left: 100%;
-              margin-inline-start: var(--double-gap);
+              margin-inline-start: var(--gap);
             }
           }
         }
-        td:nth-child(4) + td:has(:not(.bar)),
+        td:nth-child(3).cap, 
+        td:nth-child(4).cap {
+          .bar {
+            max-width: 100%;
+            span {
+              left: 100%;
+              margin-inline-start: var(- -gap);
+            }
+          }
+        }
         td:nth-child(5) + td:has(:not(.bar)),
-        td:nth-child(6) + td:has(:not(.bar)) {
+        td:nth-child(6) + td:has(:not(.bar)),
+        td:nth-child(7) + td:has(:not(.bar)) {
+          .bar {
+            span {
+              color: $white;
+              left: auto;
+              right: var(--double-gap);
+            }
+          }
+        }
+        td:nth-child(5).cap, 
+        td:nth-child(6).cap,
+        td:nth-child(7).cap  {
           .bar {
             span {
               color: $white;
@@ -561,13 +592,23 @@ footer {
   main {
     table {
       tr {
-        td:nth-child(4) + td:has(:not(.bar)),
         td:nth-child(5) + td:has(:not(.bar)),
-        td:nth-child(6) + td:has(:not(.bar)) {
+        td:nth-child(6) + td:has(:not(.bar)),
+        td:nth-child(7) + td:has(:not(.bar)) {
           .bar {
             span {
               color: $white;
-              left: calc(#{$massive} * -1);
+              margin-inline-end: var(--double-gap);
+            }
+          }
+        }
+        td:nth-child(5).cap,
+        td:nth-child(6).cap,
+        td:nth-child(7).cap    {
+          .bar {
+            span {
+              color: $white;
+              margin-inline-end: var(--double-gap);
             }
           }
         }

@@ -393,6 +393,12 @@ main table tr td + td:has(:not(.bar)) .bar {
   align-items: center;
   border-radius: 0 1.5rem 1.5rem 0;
 }
+main table tr td.cap .bar {
+  max-width: 65%;
+  display: flex;
+  align-items: center;
+  border-radius: 0 1.5rem 1.5rem 0;
+}
 
 @media (min-width: 6144px) {
   :root {
@@ -511,16 +517,34 @@ main table tr td + td:has(:not(.bar)) .bar {
   main table tr td:nth-child(3) {
     border-left: 1px solid #000000;
   }
-  main table tr td:nth-child(2) + td:has(:not(.bar)) .bar, main table tr td:nth-child(3) + td:has(:not(.bar)) .bar {
+  main table tr td:nth-child(2) + td:has(:not(.bar)) .bar,
+  main table tr td:nth-child(3) + td:has(:not(.bar)) .bar {
     max-width: 100%;
   }
-  main table tr td:nth-child(2) + td:has(:not(.bar)) .bar span, main table tr td:nth-child(3) + td:has(:not(.bar)) .bar span {
+  main table tr td:nth-child(2) + td:has(:not(.bar)) .bar span,
+  main table tr td:nth-child(3) + td:has(:not(.bar)) .bar span {
     left: 100%;
-    margin-inline-start: var(--double-gap);
+    margin-inline-start: var(--gap);
   }
-  main table tr td:nth-child(4) + td:has(:not(.bar)) .bar span,
+  main table tr td:nth-child(3).cap .bar,
+  main table tr td:nth-child(4).cap .bar {
+    max-width: 100%;
+  }
+  main table tr td:nth-child(3).cap .bar span,
+  main table tr td:nth-child(4).cap .bar span {
+    left: 100%;
+    margin-inline-start: var(--gap);
+  }
   main table tr td:nth-child(5) + td:has(:not(.bar)) .bar span,
-  main table tr td:nth-child(6) + td:has(:not(.bar)) .bar span {
+  main table tr td:nth-child(6) + td:has(:not(.bar)) .bar span,
+  main table tr td:nth-child(7) + td:has(:not(.bar)) .bar span {
+    color: #ffffff;
+    left: auto;
+    right: var(--double-gap);
+  }
+  main table tr td:nth-child(5).cap .bar span,
+  main table tr td:nth-child(6).cap .bar span,
+  main table tr td:nth-child(7).cap .bar span {
     color: #ffffff;
     left: auto;
     right: var(--double-gap);
@@ -553,11 +577,17 @@ main table tr td + td:has(:not(.bar)) .bar {
   :root {
     --gap: 0.25rem;
   }
-  main table tr td:nth-child(4) + td:has(:not(.bar)) .bar span,
   main table tr td:nth-child(5) + td:has(:not(.bar)) .bar span,
-  main table tr td:nth-child(6) + td:has(:not(.bar)) .bar span {
+  main table tr td:nth-child(6) + td:has(:not(.bar)) .bar span,
+  main table tr td:nth-child(7) + td:has(:not(.bar)) .bar span {
     color: #ffffff;
-    left: calc(4rem * -1);
+    margin-inline-end: var(--double-gap);
+  }
+  main table tr td:nth-child(5).cap .bar span,
+  main table tr td:nth-child(6).cap .bar span,
+  main table tr td:nth-child(7).cap .bar span {
+    color: #ffffff;
+    margin-inline-end: var(--double-gap);
   }
 }
 
