@@ -18,142 +18,194 @@
 <body>
 
   <main id="pipeline">
-    <h3 id="legend">Therapeutic Area</h3>
-    <dl role="doc-glossary" aria-labelledby="legend">
-      <div class="immunology">
-        <dt id="immunology">Immunology</dt>
-        <dd>A purple dot.</dd>
-      </div>
-      <div class="infectious">
-        <dt id="infectious">Infectious Disease</dt>
-        <dd>A green dot.</dd>
-      </div>
-      <div class="oncology">
-        <dt id="oncology">Oncology</dt>
-        <dd>An orange dot.</dd>
-      </div>
-      <div class="cardio">
-        <dt id="cardio">Cardiovascular & Metabolic</dt>
-        <dd>A grey dot.</dd>
-      </div>
-      <div class="undisclosed">
-        <dt id="undisclosed">Undisclosed</dt>
-        <dd>A blue dot.</dd>
-      </div>
-    </dl>
     <table aria-label="Generate Pipeline">
       <thead>
         <tr>
-          <th id="program">Program</th>
-          <th id="indication">Indication</th>
+          <th class="abs" id="program">Program</th>
+          <th class="abs" id="indication">Indication</th>
           <th class="abs"><span>Generating</span></th>
           <th class="abs"><span>IND-enabling</span></th>
           <th class="abs"><span>Phase 1</span></th>
           <th class="abs"><span>Phase 2</span></th>
           <th class="abs"><span>Phase 3</span></th>
-          <th id="collaboration">Collaboration</th>
+          <th class="abs" id="collaboration">Collaboration</th>
         </tr>
       </thead>
       <tbody>
+        <tr class="immunology">
+          <td class="section-label p2" id="immunology">Immunology</td>
+        </tr>
         <tr aria-labelledby="immunology" class="immunology">
           <td aria-labelledby="program">Anti-TSLP</td>
           <td aria-labelledby="indication">Severe asthma (both type 2 and non-type 2)</td>
           <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar cap">A purple bar labeled <span class="txt">Phase 1</span></div></td>
+          <td><div class="bar">A purple bar labeled <span class="txt">IND-Enabling</span></div></td>
           <td></td>
           <td></td>
-          <td aria-labelledby="collaboration"><span class="img"></span></td>
+          <td></td>
+          <td aria-labelledby="collaboration"></td>
         </tr>
-        <tr aria-labelledby="cardio" class="cardio">
+        <tr aria-labelledby="immunology" class="immunology">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A purple bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"></td>
+        </tr>
+        <tr aria-labelledby="immunology" class="immunology">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A purple bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"></td>
+        </tr>
+        <tr class="infectious">
+          <td class="section-label p2" id="infectious">Infectious Disease</td>
+        </tr>
+        <tr aria-labelledby="infectious" class="infectious">
           <td aria-labelledby="program">Sars-CoV-2</td>
           <td aria-labelledby="indication">Pre-exposure prophylaxis for Covid-19</td>
-          <td><div class="bar cap">A grey bar labeled <span class="txt">Generating</span></div></td>
+          <td><div class="bar"></div></td>
+          <td><div class="bar"></div></td>
+          <td><div class="bar">An orange bar labeled <span class="txt">Phase 1</span></div></td>
           <td></td>
           <td></td>
-          <td></td>
-          <td></td>
-          <td aria-labelledby="collaboration"><span class="img"></span></td>
+          <td aria-labelledby="collaboration"></td>
         </tr>
         <tr aria-labelledby="infectious" class="infectious">
           <td aria-labelledby="program">Undisclosed</td>
           <td aria-labelledby="indication">Undisclosed</td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar cap">A green bar labeled <span class="txt">Phase 2</span></div></td>
+          <td><div class="bar">An orange bar labeled <span class="txt">Generating</span></div></td>
           <td></td>
           <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="oncology">
+          <td class="section-label p2" id="oncology">Oncology</td>
         </tr>
         <tr aria-labelledby="oncology" class="oncology">
           <td aria-labelledby="program">Undisclosed</td>
           <td aria-labelledby="indication">Undisclosed</td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar cap">An orange bar labeled <span class="txt">Phase 3</span></div></td>
-          <td></td>
-        </tr>
-        <tr aria-labelledby="undisclosed" class="undisclosed">
-          <td aria-labelledby="program">Undisclosed</td>
-          <td aria-labelledby="indication">Undisclosed</td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar cap">A blue bar labeled <span class="txt">IND-enabling</span></div></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr aria-labelledby="immunology" class="immunology">
-          <td aria-labelledby="program">Anti-TSLP</td>
-          <td aria-labelledby="indication">Severe asthma (both type 2 and non-type 2)</td>
-          <td><div class="bar cap">A purple bar labeled <span class="txt">Generating</span></div></td>
+          <td><div class="bar">A green bar labeled <span class="txt">Generating</span></div></td>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
           <td aria-labelledby="collaboration"><span class="img"></span></td>
         </tr>
-        <tr aria-labelledby="infectious" class="infectious">
+        <tr aria-labelledby="oncology" class="oncology">
           <td aria-labelledby="program">Undisclosed</td>
           <td aria-labelledby="indication">Undisclosed</td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar cap">A green bar labeled <span class="txt">IND-enabling</span></div></td>
+          <td><div class="bar">A green bar labeled <span class="txt">Generating</span></div></td>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr aria-labelledby="oncology" class="oncology">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A green bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr aria-labelledby="oncology" class="oncology">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A green bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr aria-labelledby="oncology" class="oncology">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A green bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr class="cardio">
+          <td class="section-label p2" id="cardio">Cardiovascular & Metabolic</td>
         </tr>
         <tr aria-labelledby="cardio" class="cardio">
-          <td aria-labelledby="program">Undisclosed</td>
-          <td aria-labelledby="indication">Undisclosed</td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar cap">A grey bar labeled <span class="txt">Phase 1</span></div></td>
+          <td aria-labelledby="program">Uricase</td>
+          <td aria-labelledby="indication">Severe trophaceous gout</td>
+          <td><div class="bar">A blue bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>
         </tr>
-        <tr aria-labelledby="oncology" class="oncology">
-          <td aria-labelledby="program">Undisclosed</td>
-          <td aria-labelledby="indication">Undisclosed</td>
-          <td><div class="bar cap">An orange bar labeled <span class="txt">Generating</span></div></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="undisclosed">
+          <td class="section-label p2" id="undisclosed">Undisclosed</td>
         </tr>
         <tr aria-labelledby="undisclosed" class="undisclosed">
           <td aria-labelledby="program">Undisclosed</td>
           <td aria-labelledby="indication">Undisclosed</td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar"></div></td>
-          <td><div class="bar cap">A blue bar labeled <span class="txt">Phase 2</span></div></td>
+          <td><div class="bar">A grey bar labeled <span class="txt">Generating</span></div></td>
           <td></td>
           <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr aria-labelledby="undisclosed" class="undisclosed">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A grey bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr aria-labelledby="undisclosed" class="undisclosed">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A grey bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr aria-labelledby="undisclosed" class="undisclosed">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A grey bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
+        </tr>
+        <tr aria-labelledby="undisclosed" class="undisclosed">
+          <td aria-labelledby="program">Undisclosed</td>
+          <td aria-labelledby="indication">Undisclosed</td>
+          <td><div class="bar">A grey bar labeled <span class="txt">Generating</span></div></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td aria-labelledby="collaboration"><span class="img"></span></td>
         </tr>
       </tbody>
     </table>
