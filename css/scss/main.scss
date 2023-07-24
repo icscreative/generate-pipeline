@@ -300,11 +300,9 @@ main {
         position: relative;
         overflow: visible;
         img, .img {
-          height: $xxl;
-          aspect-ratio: 1.5;
-          border: 1px solid $black;
-          border-radius: $xxs;
-          margin: auto;
+          height: auto;
+          width: $giant;
+          margin: auto $sm;
         }
       }
       td:first-child {
@@ -356,7 +354,7 @@ main {
           border-radius: 0 $lg $lg 0;
         }
       }
-      // FF doesn't support the :not selector
+      // FF doesn't support the :not selector :(
       td.cap {
         .bar {
           max-width: 65%;

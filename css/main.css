@@ -340,11 +340,9 @@ main table tr td {
   overflow: visible;
 }
 main table tr td img, main table tr td .img {
-  height: 2.25rem;
-  aspect-ratio: 1.5;
-  border: 1px solid #000000;
-  border-radius: 0.5rem;
-  margin: auto;
+  height: auto;
+  width: 6rem;
+  margin: auto 0.875rem;
 }
 main table tr td:first-child {
   font-weight: bolder;
