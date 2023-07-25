@@ -368,23 +368,23 @@ main table tr td .bar {
   box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.1882352941);
 }
 main table tr td .bar.animate {
-  animation: grow 0.14s forwards linear;
+  animation: grow 0.22s forwards linear;
 }
 main table tr td:nth-child(3) .bar {
-  animation-delay: calc(0.14s);
+  animation-delay: calc(0.22s);
   inset: auto 0;
 }
 main table tr td:nth-child(4) .bar {
-  animation-delay: calc(0.14s * 2);
+  animation-delay: calc(0.22s * 2);
 }
 main table tr td:nth-child(5) .bar {
-  animation-delay: calc(0.14s * 3);
+  animation-delay: calc(0.22s * 3);
 }
 main table tr td:nth-child(6) .bar {
-  animation-delay: calc(0.14s * 4);
+  animation-delay: calc(0.22s * 4);
 }
 main table tr td:nth-child(7) .bar {
-  animation-delay: calc(0.14s * 5);
+  animation-delay: calc(0.22s * 5);
 }
 main table tr td:nth-child(6), main table tr td:nth-child(7) {
   display: none;
@@ -491,7 +491,7 @@ main table tr td.cap .bar {
   }
   main table tr td .bar .txt.animate {
     animation: blink-in 0.4s ease-in-out forwards;
-    animation-delay: calc(0.14s * 6);
+    animation-delay: calc(0.22s * 6);
   }
   main table tr td img, main table tr td .img {
     margin: 0.5rem 0 0;
