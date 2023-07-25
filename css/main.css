@@ -212,11 +212,11 @@ main dl div.multiple dd {
 }
 main table {
   position: relative;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   display: grid;
   border-collapse: collapse;
   min-width: 100%;
-  grid-template-columns: fit-content(24rem) fit-content(24rem) minmax(4rem, 2fr) minmax(4rem, 2fr) minmax(4rem, 2fr) fit-content(24rem);
+  grid-template-columns: repeat(2, fit-content(24rem)) repeat(3, minmax(4rem, 2fr)) fit-content(24rem);
 }
 main table thead,
 main table tbody,
@@ -293,8 +293,8 @@ main table .abs span {
   position: absolute;
   transform-origin: bottom left;
   transform: rotate(-55deg);
-  bottom: var(--quarter-gap);
-  left: var(--half-gap);
+  bottom: 0.875rem;
+  left: 1.25rem;
   z-index: 1;
 }
 main table tr.immunology td div {

@@ -141,17 +141,13 @@ main {
 
   table {
     position: relative;
-    // margin-block-start: var(--double-gap);
-    font-size: $xs;
+    font-size: $sm;
     display: grid;
     border-collapse: collapse;
     min-width: 100%;
     grid-template-columns:
-    fit-content($maxxx)
-    fit-content($maxxx)
-    minmax($massive, 2fr)
-    minmax($massive, 2fr)
-    minmax($massive, 2fr)
+    repeat(2, fit-content($maxxx))
+    repeat(3, minmax($massive, 2fr))
     fit-content($maxxx);
     thead,
     tbody,
@@ -227,8 +223,8 @@ main {
         position: absolute;
         transform-origin: bottom left;
         transform: rotate(-55deg);
-        bottom: var(--quarter-gap);
-        left: var(--half-gap);
+        bottom: $sm;
+        left: $bg;
         z-index: 1;
       }
     }
