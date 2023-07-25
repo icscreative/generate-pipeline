@@ -261,7 +261,7 @@ main table th {
   display: flex;
   align-items: flex-end;
   top: 0;
-  height: 6rem;
+  height: 7rem;
   text-align: left;
   font-weight: bolder;
   padding: var(--half-gap) var(--quarter-gap);
@@ -274,14 +274,14 @@ main table th {
 main table .section-label {
   position: sticky;
   box-sizing: border-box;
-  top: 6rem;
+  top: 7rem;
   min-height: unset;
   grid-column-start: 1;
   grid-column-end: 7;
   padding-block: var(--quarter-gap);
   border: none;
   font-weight: bold;
-  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.0823529412);
+  box-shadow: 0 0.1rem 0 rgba(153, 153, 153, 0.2);
   z-index: 1;
 }
 main table .abs {

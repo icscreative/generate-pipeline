@@ -192,7 +192,7 @@ main {
       display: flex;
       align-items: flex-end;
       top: 0;
-      height: 6rem;
+      height: 7rem;
       text-align: left;
       font-weight: bolder;
       padding: var(--half-gap) var(--quarter-gap);
@@ -205,14 +205,14 @@ main {
     .section-label {
       position: sticky;
       box-sizing: border-box;
-      top: 6rem;
+      top: 7rem;
       min-height: unset;
       grid-column-start: 1;
       grid-column-end: 7;
       padding-block: var(--quarter-gap);
       border: none;
       font-weight: bold;
-      box-shadow: 0 $lil 0 #00000015;
+      box-shadow: 0 $tiny 0 $ice;
       z-index: 1;
     }
     .abs {
