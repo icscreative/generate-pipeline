@@ -129,12 +129,12 @@ main {
     }
     div.cardio {
       dd {
-        background-color: $blue;
+        background-color: $grey;
       }
     }
-    div.undisclosed {
+    div.multiple {
       dd {
-        background-color: $grey;
+        background-color: $blue;
       }
     }
   }
@@ -149,8 +149,6 @@ main {
     grid-template-columns:
     fit-content($maxxx)
     fit-content($maxxx)
-    minmax($massive, 2fr)
-    minmax($massive, 2fr)
     minmax($massive, 2fr)
     minmax($massive, 2fr)
     minmax($massive, 2fr)
@@ -175,9 +173,9 @@ main {
     thead th:first-child:after {
       border-left: none;
     }
-    // thead th:last-child::after, thead th:nth-child(1)::after, thead th:nth-child(2)::after, thead th:nth-child(3)::after {
-    //   border: 0;
-    // }
+    thead th:nth-child(6), thead th:nth-child(7) {
+      display: none;
+    }
     thead tr {
       position: sticky;
       top: 6rem;
@@ -214,9 +212,10 @@ main {
       top: 6rem;
       min-height: unset;
       grid-column-start: 1;
-      grid-column-end: 9;
+      grid-column-end: 7;
       padding-block: var(--quarter-gap);
       border: none;
+      font-weight: bold;
       box-shadow: 0 $lil 0 #00000015;
       z-index: 1;
     }
@@ -272,24 +271,24 @@ main {
     tr.cardio {
       td {
         div {
-          background-color: $blue;
-          color: $blue;
-        }
-      }
-      .section-label {
-        background-color: $blue;
-        color: $white;
-      }
-    }
-    tr.undisclosed {
-      td {
-        div {
           background-color: $grey;
           color: $grey;
         }
       }
       .section-label {
         background-color: $grey;
+        color: $white;
+      }
+    }
+    tr.multiple {
+      td {
+        div {
+          background-color: $blue;
+          color: $blue;
+        }
+      }
+      .section-label {
+        background-color: $blue;
         color: $white;
       }
     }
@@ -304,9 +303,6 @@ main {
           width: $giant;
           margin: auto $sm;
         }
-      }
-      td:first-child {
-        font-weight: bolder;
       }
       td:nth-child(2) {
         border-inline-end: 1px $black solid;
@@ -345,6 +341,9 @@ main {
       }
       td:nth-child(7) .bar {
         animation-delay: calc(#{$grow-time} * 5);
+      }
+      td:nth-child(6), td:nth-child(7) {
+        display:none;
       }
       td + td:has(:not(.bar)) {
         .bar {

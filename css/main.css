@@ -205,10 +205,10 @@ main dl div.oncology dd {
   background-color: #E16E1E;
 }
 main dl div.cardio dd {
-  background-color: #0F4196;
-}
-main dl div.undisclosed dd {
   background-color: #666666;
+}
+main dl div.multiple dd {
+  background-color: #0F4196;
 }
 main table {
   position: relative;
@@ -216,7 +216,7 @@ main table {
   display: grid;
   border-collapse: collapse;
   min-width: 100%;
-  grid-template-columns: fit-content(24rem) fit-content(24rem) minmax(4rem, 2fr) minmax(4rem, 2fr) minmax(4rem, 2fr) minmax(4rem, 2fr) minmax(4rem, 2fr) fit-content(24rem);
+  grid-template-columns: fit-content(24rem) fit-content(24rem) minmax(4rem, 2fr) minmax(4rem, 2fr) minmax(4rem, 2fr) fit-content(24rem);
 }
 main table thead,
 main table tbody,
@@ -237,6 +237,9 @@ main table thead th:nth-child(2):after {
 }
 main table thead th:first-child:after {
   border-left: none;
+}
+main table thead th:nth-child(6), main table thead th:nth-child(7) {
+  display: none;
 }
 main table thead tr {
   position: sticky;
@@ -274,9 +277,10 @@ main table .section-label {
   top: 6rem;
   min-height: unset;
   grid-column-start: 1;
-  grid-column-end: 9;
+  grid-column-end: 7;
   padding-block: var(--quarter-gap);
   border: none;
+  font-weight: bold;
   box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.0823529412);
   z-index: 1;
 }
@@ -318,19 +322,19 @@ main table tr.oncology .section-label {
   color: #ffffff;
 }
 main table tr.cardio td div {
-  background-color: #0F4196;
-  color: #0F4196;
-}
-main table tr.cardio .section-label {
-  background-color: #0F4196;
-  color: #ffffff;
-}
-main table tr.undisclosed td div {
   background-color: #666666;
   color: #666666;
 }
-main table tr.undisclosed .section-label {
+main table tr.cardio .section-label {
   background-color: #666666;
+  color: #ffffff;
+}
+main table tr.multiple td div {
+  background-color: #0F4196;
+  color: #0F4196;
+}
+main table tr.multiple .section-label {
+  background-color: #0F4196;
   color: #ffffff;
 }
 main table tr td {
@@ -343,9 +347,6 @@ main table tr td img, main table tr td .img {
   height: auto;
   width: 6rem;
   margin: auto 0.875rem;
-}
-main table tr td:first-child {
-  font-weight: bolder;
 }
 main table tr td:nth-child(2) {
   border-inline-end: 1px #000000 solid;
@@ -384,6 +385,9 @@ main table tr td:nth-child(6) .bar {
 }
 main table tr td:nth-child(7) .bar {
   animation-delay: calc(0.14s * 5);
+}
+main table tr td:nth-child(6), main table tr td:nth-child(7) {
+  display: none;
 }
 main table tr td + td:has(:not(.bar)) .bar {
   max-width: 65%;
