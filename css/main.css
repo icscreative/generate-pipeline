@@ -7,6 +7,10 @@
   font-style: italic;
   src: url("../docs/assets/fonts/MessinaSans_Complete_Italic_Variable_Web_Trial.woff"), url("../docs/assets/fonts/MessinaSans_Complete_Italic_Variable_Web_Trial.woff2");
 }
+@font-face {
+  font-family: "Messina Modern";
+  src: url("../docs/assets/fonts/MessinaModern_Variable_Upright_Web_Trial.woff"), url("../docs/assets/fonts/MessinaModern_Variable_Upright_Web_Trial.woff2");
+}
 .t1 {
   font-size: 6rem;
   font-weight: 100;
@@ -131,6 +135,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Messina Modern";
   font-size: inherit;
 }
 
@@ -164,6 +169,19 @@ body {
 
 main {
   margin: var(--gap);
+}
+main .cta {
+  max-width: 65ch;
+  margin-block: 6rem;
+}
+main .cta a {
+  display: inline-block;
+  border: 1px #000000 solid;
+  padding: 1rem;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  margin-block-start: 1rem;
 }
 main dl {
   border: 1px rgba(153, 153, 153, 0.2) solid;
@@ -457,6 +475,9 @@ main table tr td.cap .bar {
   }
   main {
     margin: 0;
+  }
+  main .cta {
+    margin-inline: var(--gap);
   }
   main table {
     margin: 0;

@@ -51,6 +51,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Messina Modern";
   font-size: inherit;
 }
 
@@ -82,6 +83,19 @@ nav {
 
 main {
   margin: var(--gap);
+  .cta {
+    max-width: 65ch;
+    margin-block: $giant;
+    a {
+      display: inline-block;
+      border: 1px $black solid;
+      padding: $reg;
+      text-decoration: none;
+      color: $black;
+      font-weight: 600;
+      margin-block-start: $reg;
+    }
+  }
   dl {
     border: 1px $ice solid;
     border-radius: $xs;
@@ -361,9 +375,6 @@ main {
   }
 }
 
-footer {
-}
-
 @media (min-width: 6144px) {  
   :root {
     --gap: #{$maxx};
@@ -438,6 +449,9 @@ footer {
   }
   main {
     margin: 0;
+    .cta {
+      margin-inline: var(--gap);
+    }
     table {
       margin: 0;
       row-gap: var(--gap);

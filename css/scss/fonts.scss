@@ -10,6 +10,11 @@
   src: url('../docs/assets/fonts/MessinaSans_Complete_Italic_Variable_Web_Trial.woff'),
   url('../docs/assets/fonts/MessinaSans_Complete_Italic_Variable_Web_Trial.woff2')
 }
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('../docs/assets/fonts/MessinaModern_Variable_Upright_Web_Trial.woff'),
+  url('../docs/assets/fonts/MessinaModern_Variable_Upright_Web_Trial.woff2')
+}
 
 @mixin default-font {
   font-family: "Messina";
