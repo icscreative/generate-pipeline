@@ -391,7 +391,19 @@ main {
     font-size: #{$huge};
   }
 }
+@media (min-width: 1680px) {
+  main {
+    table {
 
+      th {
+        height: 6rem !important;
+      }
+      .section-label {
+        top: 6rem !important;
+      }
+    }
+  }
+}
 @media (min-width: 1024px) {
   main {
     table {
