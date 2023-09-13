@@ -438,7 +438,7 @@ main table tr td.cap .bar {
     font-size: 3rem;
   }
 }
-@media (min-width: 1680px) {
+@media (min-width: 1920px) {
   main table th {
     height: 6rem !important;
   }
