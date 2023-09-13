@@ -139,6 +139,15 @@ h6 {
   font-size: inherit;
 }
 
+.secret {
+  grid-column-start: -2;
+  grid-column-end: -5;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem !important;
+}
+
 .no-wrap {
   white-space: nowrap;
 }
@@ -225,7 +234,7 @@ main dl div.oncology dd {
 main dl div.cardio dd {
   background-color: #666666;
 }
-main dl div.multiple dd {
+main dl div.undisclosed dd {
   background-color: #0F4196;
 }
 main table {
@@ -347,13 +356,16 @@ main table tr.cardio .section-label {
   background-color: #666666;
   color: #ffffff;
 }
-main table tr.multiple td div {
+main table tr.undisclosed td div {
   background-color: #0F4196;
   color: #0F4196;
 }
-main table tr.multiple .section-label {
+main table tr.undisclosed .section-label {
   background-color: #0F4196;
   color: #ffffff;
+}
+main table tr.undisclosed td:nth-child(4), main table tr.undisclosed td:nth-child(5) {
+  display: none;
 }
 main table tr td {
   display: flex;
@@ -426,12 +438,18 @@ main table tr td.cap .bar {
     font-size: 3rem;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   main table .abs span {
     position: relative;
     left: 0;
     bottom: 0;
     transform: none;
+  }
+  main table th {
+    height: 4rem;
+  }
+  main table .section-label {
+    top: 4rem;
   }
 }
 @media (max-width: 6144px) {
@@ -472,6 +490,12 @@ main table tr td.cap .bar {
 @media (max-width: 820px) {
   :root {
     --gap: 1.5rem;
+  }
+  .secret {
+    grid-column-start: -1;
+    grid-column-end: -6;
+    justify-content: flex-start;
+    padding-inline-start: var(--gap) !important;
   }
   main {
     margin: 0;
