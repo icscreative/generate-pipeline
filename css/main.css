@@ -438,14 +438,6 @@ main table tr td.cap .bar {
     font-size: 3rem;
   }
 }
-@media (min-width: 2560px) {
-  main table th {
-    height: 8rem !important;
-  }
-  main table .section-label {
-    top: 8rem !important;
-  }
-}
 @media (min-width: 1680px) {
   main table th {
     height: 6rem !important;
