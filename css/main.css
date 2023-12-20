@@ -140,8 +140,8 @@ h6 {
 }
 
 .secret {
-  grid-column-start: -2;
-  grid-column-end: -5;
+  grid-column-start: 3;
+  grid-column-end: 8;
   background-color: #e5e5e5;
   display: flex;
   justify-content: center;
@@ -243,7 +243,7 @@ main table {
   display: grid;
   border-collapse: collapse;
   min-width: 100%;
-  grid-template-columns: repeat(2, fit-content(24rem)) repeat(3, minmax(4rem, 2fr)) fit-content(24rem);
+  grid-template-columns: repeat(2, fit-content(24rem)) repeat(5, minmax(4rem, 2fr)) fit-content(24rem);
 }
 main table thead,
 main table tbody,
@@ -263,9 +263,6 @@ main table thead th:nth-child(2):after {
 }
 main table thead th:first-child:after {
   border-left: none;
-}
-main table thead th:nth-child(6), main table thead th:nth-child(7) {
-  display: none;
 }
 main table thead tr {
   position: sticky;
@@ -303,7 +300,7 @@ main table .section-label {
   top: calc(7rem - 1px);
   min-height: unset;
   grid-column-start: 1;
-  grid-column-end: 7;
+  grid-column-end: 9;
   padding-block: var(--quarter-gap);
   border: none;
   font-weight: bold;
@@ -364,9 +361,6 @@ main table tr.undisclosed .section-label {
   background-color: #0F4196;
   color: #ffffff;
 }
-main table tr.undisclosed td:nth-child(4), main table tr.undisclosed td:nth-child(5) {
-  display: none;
-}
 main table tr td {
   display: flex;
   align-items: center;
@@ -415,9 +409,6 @@ main table tr td:nth-child(6) .bar {
 }
 main table tr td:nth-child(7) .bar {
   animation-delay: calc(0.22s * 5);
-}
-main table tr td:nth-child(6), main table tr td:nth-child(7) {
-  display: none;
 }
 main table tr td + td:has(:not(.bar)) .bar {
   max-width: 65%;
@@ -500,8 +491,8 @@ main table tr td.cap .bar {
     --gap: 1.5rem;
   }
   .secret {
-    grid-column-start: -1;
-    grid-column-end: -6;
+    grid-column-start: 1;
+    grid-column-end: 6;
     justify-content: flex-start;
     padding-inline-start: var(--gap) !important;
   }

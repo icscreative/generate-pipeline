@@ -55,8 +55,8 @@ h6 {
   font-size: inherit;
 }
 .secret {
-  grid-column-start: -2;
-  grid-column-end: -5;
+  grid-column-start: 3;
+  grid-column-end: 8;
   background-color: #e5e5e5;
   display:flex;
   justify-content: center;
@@ -167,7 +167,7 @@ main {
     min-width: 100%;
     grid-template-columns:
     repeat(2, fit-content($maxxx))
-    repeat(3, minmax($massive, 2fr))
+    repeat(5, minmax($massive, 2fr))
     fit-content($maxxx);
     thead,
     tbody,
@@ -187,9 +187,6 @@ main {
     }
     thead th:first-child:after {
       border-left: none;
-    }
-    thead th:nth-child(6), thead th:nth-child(7) {
-      display: none;
     }
     thead tr {
       position: sticky;
@@ -227,7 +224,7 @@ main {
       top:  calc(7rem - 1px);
       min-height: unset;
       grid-column-start: 1;
-      grid-column-end: 7;
+      grid-column-end: 9;
       padding-block: var(--quarter-gap);
       border: none;
       font-weight: bold;
@@ -307,9 +304,7 @@ main {
         background-color: $blue;
         color: $white;
       }
-      td:nth-child(4), td:nth-child(5) {
-        display:none;
-      }
+
     }
     tr {
       td {
@@ -360,9 +355,6 @@ main {
       }
       td:nth-child(7) .bar {
         animation-delay: calc(#{$grow-time} * 5);
-      }
-      td:nth-child(6), td:nth-child(7) {
-        display:none;
       }
       td + td:has(:not(.bar)) {
         .bar {
@@ -477,8 +469,8 @@ main {
     --gap: #{$lg};
   }
   .secret {
-    grid-column-start: -1;
-    grid-column-end: -6;
+    grid-column-start: 1;
+    grid-column-end: 6;
     justify-content: flex-start;
     padding-inline-start: var(--gap) !important;
   }
