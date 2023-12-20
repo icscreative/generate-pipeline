@@ -437,7 +437,7 @@ main table tr td.cap .bar {
     top: calc(6rem - 1px) !important;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   main table .abs span {
     position: relative;
     left: 0;
