@@ -256,7 +256,6 @@ main table thead th::after {
   inset: -1px 0 0;
   background-color: #ffffff;
   border-left: 1px solid rgba(153, 153, 153, 0.2);
-  border-bottom: 1px solid #000000;
   z-index: -1;
 }
 main table thead th:nth-child(2):after {
@@ -301,7 +300,7 @@ main table th {
 main table .section-label {
   position: sticky;
   box-sizing: border-box;
-  top: 7rem;
+  top: calc(7rem - 1px);
   min-height: unset;
   grid-column-start: 1;
   grid-column-end: 7;
@@ -315,6 +314,7 @@ main table .abs {
   overflow: visible;
   border-right: 0;
   border-left: 0;
+  border-bottom: 1px solid #000000;
 }
 main table .abs span {
   position: absolute;
@@ -443,7 +443,7 @@ main table tr td.cap .bar {
     height: 6rem !important;
   }
   main table .section-label {
-    top: 6rem !important;
+    top: calc(6rem - 1px) !important;
   }
 }
 @media (min-width: 1024px) {
@@ -457,7 +457,7 @@ main table tr td.cap .bar {
     height: 4rem;
   }
   main table .section-label {
-    top: 4rem;
+    top: calc(4rem - 1px);
   }
 }
 @media (max-width: 6144px) {
@@ -524,7 +524,7 @@ main table tr td.cap .bar {
   }
   main table tr td.section-label {
     position: sticky;
-    top: 0;
+    top: -1px;
     padding: var(--gap);
     margin: 0 0 2rem !important;
   }

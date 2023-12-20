@@ -180,7 +180,6 @@ main {
       inset: -1px 0 0;
       background-color: $white;
       border-left: 1px solid $ice;
-      border-bottom: 1px solid $black;
       z-index: -1;
     }
     thead th:nth-child(2):after {
@@ -225,7 +224,7 @@ main {
     .section-label {
       position: sticky;
       box-sizing: border-box;
-      top: 7rem;
+      top:  calc(7rem - 1px);
       min-height: unset;
       grid-column-start: 1;
       grid-column-end: 7;
@@ -239,6 +238,7 @@ main {
       overflow: visible;
       border-right: 0;
       border-left: 0;
+      border-bottom: 1px solid $black;
       span {
         position: absolute;
         transform-origin: bottom left;
@@ -399,7 +399,7 @@ main {
         height: 6rem !important;
       }
       .section-label {
-        top: 6rem !important;
+        top:  calc(6rem - 1px) !important;
       }
     }
   }
@@ -420,7 +420,7 @@ main {
         height: 4rem;
       }
       .section-label {
-        top: 4rem;
+        top:  calc(4rem - 1px);
       }
     }
   }
@@ -501,7 +501,7 @@ main {
       tr {
         td.section-label {
           position: sticky;
-          top: 0;
+          top: -1px;
           padding:  var(--gap);
           margin: 0 0 $xl!important;
         }
